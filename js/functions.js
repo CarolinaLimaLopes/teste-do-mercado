@@ -69,5 +69,4 @@ $(function(){
 	$(".btnEditar").bind("click", Editar);
 	$(".btnExcluir").bind("click", Excluir);
 	$("#btnAdicionar").bind("click", Adicionar); 
-	
 });

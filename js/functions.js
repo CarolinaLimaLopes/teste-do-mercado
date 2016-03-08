@@ -1,15 +1,16 @@
 $(function(){
 	function Adicionar(){
 		$("#tblCadastro tbody").append(
-			"<tr>"+
-			"<td><input id='txtCod' type='text'/></td>"+
-			"<td><input id='txtTipo' type='text'/></td>"+
-			"<td><input id='txtNome' type='text'/></td>"+
-			"<td><input id='txtQtd' type='text'/></td>"+
-			"<td><input id='txtPreco' type='text'/></td>"+
-			"<td><input id='txtNeg' type='text'/></td>"+
+			"<tr name='dados' onSubmit='return enviardados();'>"+
+			"<td><input id='txtCod' name='txtCod' type='text' placeholder='Digite o código:' title='Código da Mercadoria'/></td>"+
+			"<td><input id='txtTipo' name='txtTipo' type='text' placeholder='Digite o tipo:' title='Tipo da Mercadoria'/></td>"+
+			"<td><input id='txtNome' type='text' placeholder='Digite o nome:' title='Nome da Mercadoria'/></td>"+
+			"<td><input id='txtQtd' type='text' placeholder='Digite a quantidade:' title='Quantidade da Mercadoria'/></td>"+
+			"<td><input id='txtPreco' type='text' placeholder='Digite o preço:' title='Preço da Mercadoria'/></td>"+
+			"<td><input id='txtNeg' type='text' placeholder='Venda ou Compra' title='Tipo de Negócio: Venda/Compra'/></td>"+
 			"<td><img src='images/disk.png' class='btnSalvar'><img src='images/delete.png' class='btnExcluir'/></td>"+
-			"</tr>");
+			"</tr>"
+			);
 
 		$(".btnSalvar").bind("click", Salvar);     
 		$(".btnExcluir").bind("click", Excluir);
@@ -68,4 +69,5 @@ $(function(){
 	$(".btnEditar").bind("click", Editar);
 	$(".btnExcluir").bind("click", Excluir);
 	$("#btnAdicionar").bind("click", Adicionar); 
+	
 });
